@@ -1,0 +1,68 @@
+{
+  "name": "Streaming station events",
+  "description": "Streaming station events.",
+  "parameters": [
+    {
+      "name": "project",
+      "label": "Google cloud project id",
+      "helpText": "Name of the google cloud project.",
+      "regexes": [
+        "[a-zA-Z][-_.~+%a-zA-Z0-9]{2,}"
+      ]
+    },
+    {
+      "name": "iot_topic_telemetry",
+      "label": "Input PubSub topic.",
+      "helpText": "Name of the input PubSub topic to consume from.",
+      "regexes": [
+        "[a-zA-Z][-_.~+%a-zA-Z0-9]{2,}"
+      ]
+    },
+    {
+      "name": "iot_topic_dead_letter",
+      "label": "Dead Letter PubSub topic.",
+      "helpText": "Name of the input PubSub topic for dead letter messages.",
+      "regexes": [
+        "[a-zA-Z][-_.~+%a-zA-Z0-9]{2,}"
+      ]
+    },
+    {
+      "name": "cloud_topic_workout",
+      "label": "Cloud PubSub topic.",
+      "helpText": "Name of the cloud PubSub topic to forward historical messages to.",
+      "regexes": [
+        "[a-zA-Z][-_.~+%a-zA-Z0-9]{2,}"
+      ]
+    },
+    {
+      "name": "bq_data_set",
+      "label": "BigQuery dataset name.",
+      "helpText": "Name of the BigQuery dataset."
+    },
+    {
+      "name": "bq_firmware",
+      "label": "BigQuery firmware table name.",
+      "helpText": "Name of the BigQuery firmware table."
+    },
+    {
+      "name": "bq_heart_rate",
+      "label": "BigQuery heart rate table name.",
+      "helpText": "Name of the BigQuery heart rate table."
+    },
+    {
+      "name": "region",
+      "label": "Dataflow region.",
+      "helpText": "Dataflow region."
+    },
+    {
+      "name": "runner",
+      "label": "Dataflow runner type.",
+      "helpText": "Dataflow runner type."
+    },
+    {
+      "name": "IOT_LOG_LEVEL",
+      "label": "Dataflow log level",
+      "helpText": "Dataflow log level"
+    }
+  ]
+}

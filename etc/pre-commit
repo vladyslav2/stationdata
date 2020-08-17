@@ -1,0 +1,14 @@
+#!/bin/sh
+
+cd ./admin
+source venv/bin/activate
+pylint app/portaladmin
+cd ../
+
+. ./cloud-services/env-files/iot-local.env
+cd ./cloud-services/dataflow/
+source venv/bin/activate
+cd stationdata/
+./make.sh lint
+./make.sh test
+cd ../../../
